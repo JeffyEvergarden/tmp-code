@@ -5,18 +5,15 @@ server.on('request', function(req, res) {
   req.on('data',function(chunk) {
     data +=chunk;
   })
-  let method = 'dasdasda';
-  let url = '';
-  let headers = '';
   req.on('end', function() {
-    method = req.method;
-    url = req.url;
-    headers = JSON.stringify(req.headers)
+    let method = req.method;
+    let url = req.url;
+    let headers = JSON.stringify(req.headers)
     // 以下几行代码写在外面无效
     res.writeHead(200, {
       'content-type': 'text/plain'
     })
-    res.end(data +'  '+ method +' ' + url  + '' + headers )
+    res.end(data +'  '+ method +' ' + url  + ' ' + headers )
   })
 })
 
