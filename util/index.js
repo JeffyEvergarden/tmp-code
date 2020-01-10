@@ -6,5 +6,5 @@ let obj = {
 }
 let str = util.inspect(obj)
 
-console.log(str)
+util.log(str)
 // util.isArray()
