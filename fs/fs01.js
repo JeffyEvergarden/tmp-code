@@ -9,5 +9,5 @@ fs.unlink('../demo/hello.txt', (err) => {
   }
 })
 // 同步操作
-fs.unlink('../demo/hello.txt') // 不存在会直接报错 建议在try catch使用
+fs.unlinkSync('../demo/hello.txt') // 不存在会直接报错 建议在try catch使用
 
